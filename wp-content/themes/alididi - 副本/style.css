@@ -1,0 +1,206 @@
+/*
+Theme Name: 阿狸弟弟
+Theme URI: http://www.colddoor.net
+Description:this is a platform for electronic commercial shopping direction
+Author: HLQ
+Author URI: http://www.habotalk.com
+Version: 1.0
+Tags: electronic commercial, shopping suggestion, bootstrap ,php
+*/
+/*内容区代码 开始*/
+.container{
+    position: relative;
+    width: 100%;
+    padding:0px 20px;
+}
+body{
+    background-color: #ffffff;
+    font-family:Arial,Verdana, Helvetica, sans-serif;
+    font-size: 1.5em;
+    width: 100%
+}
+/*header navbar start*/
+.navbar-form{
+    position: relative;
+    /*top: 40px;*/
+}
+#top_search{
+    padding-top:30px;
+    float: right;
+}
+.header>.row img{margin: 5px auto}
+.imags{float: left;width: 40%}
+/*header navbar end*/
+
+
+
+/* huan deng pian kaishi */
+a{color:#333;text-decoration:none;}
+a:hover{color:#c00; text-decoration:underline;}
+.box-zzsc{position:relative; margin:0px auto}
+.ctrl-panel{ position:absolute; right:30px; top:360px; z-index:10;}
+.m-page{ width:32px; height:32px; text-align:center; background:#963; float:left; display:inline; margin-left:10px; line-height:32px; color:#fff; font-size:13px;}
+.m-page:hover{ text-decoration:none; color:#fff;}
+.focus{background:#000;}
+.con{ width:100%;}
+.scroll-wrap {OVERFLOW: hidden; WIDTH:100%; POSITION: relative; HEIGHT: 410px}
+.scroll_box_content {POSITION: absolute}
+.content_list {FLOAT: left;max-width: 100%; HEIGHT: 410px; cursor:pointer;}
+/*end*/
+/* CSS3ÓÒ²àÐü¸¡¶þÎ¬Âë·µ»Ø¶¥²¿´úÂëÑùÊ½ ¿ªÊ¼ */
+.toolbar-item,.toolbar-layer{background:url(images/toolbar.png) no-repeat;}
+.toolbar{position:fixed;right:0px;bottom:20px;z-index: 10001}/*¼ÙÉèÍøÒ³¿í¶ÈÎª1200px£¬µ¼º½ÌõÔÚÓÒ²àÐü¸¡*/
+.toolbar-item{display:block;width:52px;height:52px;margin-top:1px;position:relative;-moz-transition:background-position 1s;-ms-transition:background-position 1s;-o-moz-transition:background-position 1s;-webkit-moz-transition:background-position 1s;transition:background-position 1s;}
+.toolbar-item:hover .toolbar-layer{opacity:1;filter:alpha(opacity=100);transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);}
+.toolbar-item-weixin{background-position:0 -798px;}
+.toolbar-item-weixin:hover{background-position:0 -860px;}
+.toolbar-item-weixin .toolbar-layer{height:212px;background-position:0 0;}
+.toolbar-item-feedback{background-position:0 -426px;}
+.toolbar-item-feedback:hover{background-position:0 -488px;}
+.toolbar-item-app{background-position:0 -550px;}
+.toolbar-item-app:hover{background-position:0 -612px;}
+.toolbar-item-app .toolbar-layer{height:194px;background-position:0 -222px;}
+.toolbar-item-top{background-position:0 -674px;}
+.toolbar-item-top:hover{background-position:0 -736px;}
+.toolbar-layer{position:absolute;right:46px;bottom:-10px;width:172px;opacity:0;filter:alpha(opacity=0);
+    transform-origin: 95% 95%;-moz-transform-origin: 95% 95%;-ms-transform-origin: 95% 95%;-o-transform-origin: 95% 95%;-webkit-transform-origin: 95% 95%;transform:scale(0.01);
+    -moz-transform:scale(0.01);-ms-transform:scale(0.01);-o-transform:scale(0.01);-webkit-transform:scale(0.01);transition:all 1s;-moz-transition:all 1s;-ms-transition:all 1s;-o-transition:all 1s;-webkit-transition:all 1s;}
+/* huan deng pian end*/
+
+/*ÔÚÏß¿Í·þÑùÊ½ ¿ªÊ¼*/
+body{position:relative;margin:0;padding:10px 0 0 0;}
+*{margin:0;padding:0;list-style-type:none}
+a,img{border:0}
+a,a:hover{color:#333;text-decoration:none}
+/*QQÔÚÏß¿Í·þ*/
+/*侧边在线客服样式 开始*/
+.qqserver p img{display:inline;margin:-5px 5px 0 0;vertical-align:middle;}
+.scrollsidebar{position:absolute;z-index:999;top:220px;}
+.side_content{width:167px;height:auto;overflow:hidden;float:left;}
+.side_content .side_list{width:167px;overflow:hidden;}
+.show_btn{width:0;height:144px;overflow:hidden;margin-top:50px;float:left;cursor:pointer;}
+.show_btn span{display:none;}
+.close_btn{width:24px;height:24px;cursor:pointer;}
+.side_title,.side_bottom,.close_btn,.show_btn{background:url(images/sidebar_bg.png) no-repeat;_background:url(images/sidebar_bg.png) no-repeat;}
+.side_title{height:46px;}
+.side_title{height:46px;}
+.side_bottom{height:8px;}
+.side_center{font-family:Verdana, Geneva, sans-serif;padding:10px 12px 5px 12px;font-size:12px;}
+.close_btn{float:right;display:block;width:19px;height:19px;margin:16px 7px 0 0;_margin:16px 3px 0 0;}
+.close_btn span{display:none;}
+.side_center .qqserver p{text-align:left;padding:6px 0;margin:0;vertical-align:middle;}
+.phoneserver {font-size:14px;text-align:center;}
+.phoneserver p{padding:2px 0;_height:16px;margin:0;color:#666666;}
+.msgserver{border-top:1px dotted #ccc;text-align:center;margin-top:6px;padding:10px 0 3px 0;}
+.msgserver a{background:url(images/sidebar_bg.png) no-repeat -119px -154px;padding:3px 0 3px 23px;}
+.side_content hr{border-bottom:1px solid #E6E6E6;height:1px;margin:10px 0;clear:both;}
+/* green skin  */
+.side_green .side_title{background-position:-505px 0;}
+.side_green .side_center{background:url(images/green_line.gif) repeat-y center;}
+.side_green .side_bottom{background-position:-505px -60px;}
+.side_green .close_btn{background-position:-44px -45px;}
+.side_green .close_btn:hover{background-position:-65px -45px;}
+.side_green .show_btn{background-position:-187px 0;}
+.side_green .msgserver a{color:#68c40b;}
+.side_green hr{border-bottom:1px solid #edf2e5;}
+/*侧边在线客服样式 结束*/
+
+.banner_right{float:right;margin: 5px auto;width: 82%}
+/*¾ÞÄ»ÑùÊ½*/
+.modal-content{clear: both;}
+.panel-body{padding: 0px}
+/*²à±ßÀ¸*/
+.side_content{z-index: 10004}
+#list-group{
+    z-index: 1000;
+    overflow: hidden;
+}
+#sidebar{float: left;margin: 5px auto;width:16%}
+/*ÍøÕ¾µ×²¿*/
+
+/*.row .col-lg-3{background-color: #ccccff;padding: 10px}*/
+
+/*底部导航栏样式 开始*/
+.table-responsive li{float: left;display: block;width: 25%;padding:5px 0px 5px 0px;text-align:left;}
+.table-responsive{border-bottom: 1px dashed #ffffff}
+.table-responsive h4{display: block;padding:10px 0px 10px 20px;background-color: #333333;color: #ffffff;overflow: hidden;margin-top:-5px }
+.table-responsive dt,dd{padding-left: 20px}
+.footer{
+        background-color: #FFFFFF;
+        padding: 5px 0px;
+        margin-top:10px; 
+        color: #333333;
+        width: 100%;
+        }
+.footer a:hover{color: #837e6c}
+.footer a{color: #333333}
+.footer>p{background-color: #333333;padding: 20px;text-align: center;color: #ffffff;margin:-10px auto}
+.bottom_navbar>li{background-color: #9d9d9d;border-left:1px solid #ffffff}
+/*底部导航栏样式 开始*/
+
+/*巨幕自定义样式 开始*/
+.jumbotron{
+            background-color: #837e6c;
+            clear: both;
+            padding: 0;
+        }
+        .jumbotron>img{width: 100%}
+/*巨幕自定义样式 结束*/
+/*用户登录样式 开始*/
+.login_left{width: 60%;height: auto;background-color: #333333;float: left;border-radius: 5px}
+.login_right{width: 39%;height: auto;background-color: #837e6c;float: right;padding: 20px;border-radius: 3px}
+.login_right button{margin:5px 10px 5px 0px;}
+.login_right .input-group{padding:5px 0 5px 0;}
+#getpassword{margin: 5px auto}
+#zhaohui{float: right;}
+/*用户登录样式 结束*/
+/*产品分类页样式 开始*/
+
+/*产品分类页样式 开始*/
+
+/*产品展示列表清单样式 开始*/
+#talk_image{float: left;margin: 2px;}
+.talk_container>.list-group>li:hover{background-color: #f6f6f6}
+.talk_container>.list-group>li a:hover{color: #837e6c}
+.talk_container>.list-group>li img{float: left;margin: 5px}
+.talk_container>.list-group>.list-group-item{clear: both;}
+/*产品展示列表清单样式 结束*/
+
+/*用户注册页面样式 开始*/
+#register_form{padding: 10px;margin: 20px auto}
+#register_form div{background-color: #837e6c;padding: 10px 20px;}
+#register_form div:first-child{border-radius: 4px 4px 0px 0px}
+#register_form div:last-child{border-radius: 0px 0px 4px 4px;padding-bottom: 20px}
+#register_form span{color: #ff0000}
+/*用户注册页面样式 结束*/
+
+/*用户注册成功样式 开始*/
+.success_reg{margin: 20px auto}
+/*用户注册成功样式 结束*/
+
+/*404页面样式 开始*/
+.404_img>img{width: 100%;height: auto;}
+/*404页面样式 结束*/
+
+@media screen and (max-width:920px){
+    #head_logo{margin: 10px auto;}
+}
+
+@media screen and (max-width:760px){
+    body{background:#eeeeee;}
+    #head_logo{display: none;}
+    .bnav2 .s1{display:none;}
+    .login_right{width: 100%;}
+    .login_left{display: none;}
+    #sidebar{width: 100%;display:inherit;}
+    #banner_right{width: 100%;}
+} 
+@media screen and (max-width:460px){
+    #img_404{display:none;}
+    .error_tishi_1{margin: 20px auto}
+    .error_tishi p{line-height: 20px}
+    #sidebar{display: none;}
+    #banner_right{display: none;}
+} 
+/*注意，在为CSS的类或者id命名的时候，最好别用数字开头，以免造成不必要的麻烦*/
+   

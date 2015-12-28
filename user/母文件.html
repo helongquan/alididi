@@ -1,0 +1,18 @@
+<div id="header">用户头像选择</div>
+    <div id="contains">
+        <select name="myMenu" id="change" onchange="check(this)">
+            <option value="images/pic.gif">头像1</option>
+            <option value="images/pic.gif">头像2</option>
+            <option value="images/pic.gif">头像3</option>
+        </select>
+        <img id="showTime" src="images/pic1.gif">
+        <script>
+        function check(obj){
+            var src=obj.value;
+            $("showTime").src=src;
+        }
+        function $(obj){
+            return document.getElementById(obj);
+        }
+        </script>
+    </div>

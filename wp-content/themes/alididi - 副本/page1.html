@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../assets/css/bootstrap.css" >
+
+    </head>
+    <body id="app">
+
+        <div id="navigation">
+            <h1>Hello Page1!</h1>
+            <p>
+                <a v-link="{ path: '/foo' }">Go to Foo</a>
+                <a v-link="{path : '/acc' }">According</a>
+                <a v-link="{path: '/bar' }">bar</a>
+                <a v-link="{path: '/cpp' }" class="btn btn-primary">cpp</a>
+            </p>
+
+        </div>
+
+        <div id="main-content">
+            <router-view></router-view>
+        </div>
+
+
+    <!-- vue外部实例 -->
+        
+    <!-- vue外部实例 -->
+
+
+        <button
+                class="btn btn-success btn-lg"
+                @click="showRight = true">Show Aside on right</button>
+
+        <sidebar :show.sync="showRight" placement="right" header="Title" :width="350">
+            <h4>Text in aside</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p> Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+          <pre><code class="language-javascript">
+              if (talk === cheap){
+              code.style.display = 'block'
+              }
+          </code></pre>
+            <div class="aside-footer">
+                <button type="button" class="btn btn-default" @click="showRight=false">Close</button>
+            </div>
+        </sidebar>
+
+        <button
+                class="btn btn-danger btn-lg"
+                @click="showLeftbar()">Show Aside on left</button>
+
+        <sidebar  :show.sync="showLeft" placement="left" header="Title" :width="350">
+            <h4>Text in aside</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p> Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+        <pre><code class="language-javascript">
+            if (talk === cheap){
+            code.style.display = 'block'
+            }
+        </code></pre>
+            <div class="aside-footer">
+                <button type="button" class="btn btn-default" @click="showLeft=false">Close</button>
+            </div>
+        </sidebar>
+
+        <script src="../assets/js/jquery/jquery.js"></script>
+        <script src="../assets/js/vue/vue.js"></script>
+        <script src="../assets/js/vue/vue-router.js"></script>
+        <script src="../assets/js/vue/vue-strap.js"></script>
+        <script src="../assets/js/yoochoice/yoo.js"></script>
+        
+        <script src="js/comps/foo.js"></script>
+        <script src="js/comps/acc.js"></script>
+        <script src="js/comps/bar.js"></script>
+        <script src="js/comps/cpp.js"></script>
+        <script src="js/page1.js"></script>        
+    </body>
+</html>
+

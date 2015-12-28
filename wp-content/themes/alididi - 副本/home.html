@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="../assets/css/bootstrap.css" >
+
+    </head>
+    <body id="app">
+
+        <div id="navigation">
+            <h1>Hello App!</h1>
+            <p>
+                <a href="#/foo">Go to Foo1</a>
+                <a v-link="{ path: '/foo' }">Go to Foo</a>
+                <a v-link="{ path: '/bar' }">Go to Bar</a>
+                <a href="page1.html">Page 1</a>
+            </p>
+
+        </div>
+
+        <div id="main-content">
+            <router-view></router-view>
+        </div>
+
+
+        <alert type="success" >
+            <strong>Well Done!</strong>
+            You successfully read this important alert message.
+        </alert>
+
+
+
+        <script src="../assets/js/jquery/jquery.js"></script>
+        <script src="../assets/js/vue/vue.js"></script>
+        <script src="../assets/js/vue/vue-router.js"></script>
+        <script src="../assets/js/vue/vue-strap.js"></script>
+        <script src="../assets/js/yoochoice/yoo.js"></script>
+        <script src="js/comps/foo.js"></script>
+        <script src="js/comps/bar.js"></script>
+
+        <script src="js/index.js"></script>
+    </body>
+</html>
+

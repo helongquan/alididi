@@ -1,0 +1,18 @@
+/*网站后台样式 开始*/
+	#admin_container{width: 100%;margin:20px 0px 20px 0px;padding: 0px 10px 10px 0px}
+
+	#admin_left{width: 20%;height:1500px;float: left;border-right: 1px solid #dddddd;
+				background-color: #555555;padding:50px 10px 20px 0px}
+	#admin_left>.admin_left_content{padding: 10px;}
+	#admin_right{width: 79.9%;float: right;background-color: #f5f5f5;padding: 10px;height:1500px;}
+	#admin_right h2,label{padding-left:15px;padding-top:10px }
+	#myEditor{margin: 5px 15px 0px 15px}
+	#selType{padding-left:15px}
+	#profile-links a{color: #f5f5f5}
+	#profile-links{float: right;}
+	#admin_side_list{clear: both;margin-top: 40px;padding: 10px}
+	.footer{background-color: #333333;color: #ffffff;width:100%;
+			padding: 20px;position: relative;z-index:1000;bottom: 0px;margin-top:20px }
+	#admin_sort_list{margin: 0px 15px}
+	#admin_sort_list h2{background-color: #f5f5f5;display: block;margin: 0px auto}		
+/*网站后台样式 结束*/

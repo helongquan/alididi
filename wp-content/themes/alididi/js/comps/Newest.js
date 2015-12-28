@@ -1,0 +1,3 @@
+Yoo.modules.NEWEST = Vue.extend({
+template: '<div class="jumbotron"><div class="container"><h1>黛安芬强势进驻，只为女人而来</h1><a href="#" class="thumbnail"><img src="images/banner_12.jpg" alt="黛安芬"></a><p><a class="btn btn-primary btn-lg">进入选购区</a></p></div></div><div class="jumbotron"><div class="container"><h1>高性价比笔记本系列，极速体验</h1><a href="#" class="thumbnail"><img src="images/banner_13.jpg" alt="各种笔记本款式，任你挑选"></a><p><a class="btn btn-primary btn-lg">进入选购区</a></p></div></div><div class="jumbotron"><div class="container"><h1>过年吃什么？干货才来劲！</h1><a href="#" class="thumbnail"><img src="images/banner_15.jpg" alt="干货系列"></a><p><a class="btn btn-primary btn-lg">进入选购区</a></p></div></div>'
+});
