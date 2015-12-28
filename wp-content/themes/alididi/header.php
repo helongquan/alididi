@@ -23,7 +23,7 @@
         <div class="bnav openClose">
             <div class="bnav2">
                 <span class="s1">
-                    欢迎来到阿狸弟弟！
+                    欢迎来到<?php bloginfo(’name’); ?>！
                 </span>
                 <span class="s2">
                     <span><a href="#" @click="showRight = true"><i class="glyphicon glyphicon-log-in"></i> 登录</a>
@@ -69,7 +69,7 @@
                     <hr>
                     <div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/pic3.jpg" class="img-responsive" alt="Image">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/pic1.jpg" class="img-responsive" alt="Image">
                         </div>
                         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                             <img src="<?php bloginfo('template_directory'); ?>/images/pic2.jpg" class="img-responsive" alt="Image">
@@ -126,7 +126,9 @@
         <!-- 顶部logo和搜索框 开始-->
         <div class="header">
             <div class="row">
-                <div class="imags" id="head_logo"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png"></div>
+                <div class="col-xs-12 col-xs-12 col-md-6 col-lg-6">
+                    <div class="imags" id="head_logo"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png"></div>
+                </div>
                 <div class="col-xs-12 col-xs-12 col-md-6 col-lg-6" id="top_search">
                     <form class="navbar-form navbar-right" role="search" method="get" action="<?php bloginfo('url'); ?>/">
                         <div class="input-group">

@@ -2,27 +2,21 @@
         <!-- 内容区 开始-->
 <?php get_sidebar();?>        
             <!-- 内容模块 开始-->
-            <div id="main-content">
-                <router-view></router-view>
-            </div>
-
             <!-- 循环模块 开始 -->
             <?php if (have_posts()) : ?>
 <?php while (have_posts()) : the_post(); ?>
                 <!--需要循环的模块-->
 
-            <div class="jumbotron">
-                <div class="container">
-                    <h1><a href="<?php the_permalink() ?>"><?php echo mb_strimwidth(get_the_title(), 0, 32, '...'); ?></a></h1>
-                   	<!-- <a href="#" class="thumbnail">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/banner_11.jpg" alt="kindle阅读器">
-                    </a> -->
-                        <?php include( TEMPLATEPATH . '/thumbnail.php' ); ?>
-                    <p><a class="btn btn-primary btn-lg" href="#" role="button">进入选购区</a></p>
-                    <p><?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 200,"……");?>
-</p>
+                <div class="jumbotron">
+                    <div class="container">
+                        <h1><a href="<?php the_permalink() ?>"> <?php echo mb_strimwidth(get_the_title(), 0, 30,''); ?></a></h1>
+                       	<!-- <a href="#" class="thumbnail">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/banner_11.jpg" alt="kindle阅读器">
+                        </a> -->
+                            <?php include( TEMPLATEPATH . '/thumbnail.php' ); ?>
+                        <p><a class="btn btn-primary btn-lg" href="#" role="button">进入选购区</a></p>
+                    </div>
                 </div>
-            </div>
 
 
 <?php endwhile; ?>

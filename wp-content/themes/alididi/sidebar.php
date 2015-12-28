@@ -1,7 +1,3 @@
-		<div id="main-content">
-            <router-view></router-view>
-        </div>
-
         <div class="panel-body" id="panel-body">
             <!-- 侧边栏 开始-->
             <div class="sidebar" id="sidebar">
