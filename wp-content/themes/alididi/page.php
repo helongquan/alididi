@@ -1,65 +1,58 @@
+<?php    
+/* 
+Template Name: 默认页面模板   
+*/   
+?>
 <?php get_header();?>       
         <!-- 内容区 开始-->
-<?php get_sidebar();?>        
+<!--             <div id="main-content">
+                <router-view></router-view>
+            </div>  -->
             <!-- 内容模块 开始-->
+            <ul class="list-group" id="index_listgroup">
             <!-- 循环模块 开始 -->
-            <?php if (have_posts()) : ?>
-<?php while (have_posts()) : the_post(); ?>
-                <!--需要循环的模块-->
+                <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+                            <!--需要循环的模块-->
+                    <li class="list-group-item">
+                        <div class="media">
+                          <div class="media-body">
+                            <h3><a href="<?php the_permalink() ?>"><?php echo mb_strimwidth(get_the_title(), 0, 40, '...'); ?></a></h3>
+                            <p id="single_biaoqian"><span class="glyphicon glyphicon-user">:<?php the_author(); ?></span>&nbsp;&nbsp;<span class="glyphicon glyphicon-time">:<?php the_date_xml()?>&nbsp;</span><span class="glyphicon glyphicon-th-list">:<?php the_category(',') ?></span></p>
+                            <p><?php the_content(); ?></p>
+                          </div>
+                          <p><a href="<?php the_permalink() ?>#commentform" >发表评论<i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;|&nbsp;&nbsp;<i class="glyphicon glyphicon-scale"></i>:<?php comments_popup_link('0 条评论','1 条评论','% 条评论','','评论已关闭'); ?></p>
+                        </div>
+                        <!-- 文章分页代码调用 开始 -->
+                            <?php wp_link_pages(array('before' => '<div class="fenye">分页阅读：', 'after' => '', 'next_or_number' => 'next', 'previouspagelink' => '&laquo;', 'nextpagelink' => "")); ?> <?php wp_link_pages(array('before' => '', 'after' => '', 'next_or_number' => 'number', 'link_before' =>'<span>', 'link_after'=>'</span>')); ?> <?php wp_link_pages(array('before' => '', 'after' => '</div>', 'next_or_number' => 'next', 'previouspagelink' => '', 'nextpagelink' => "&raquo;")); ?>
+                        <!-- 文章分页代码调用 结束 -->
+                    </li>
 
-                <div class="jumbotron">
-                    <div class="container">
-                        <h1><a href="<?php the_permalink() ?>"> <?php echo mb_strimwidth(get_the_title(), 0, 30,''); ?></a></h1>
-                       	<!-- <a href="#" class="thumbnail">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/banner_11.jpg" alt="kindle阅读器">
-                        </a> -->
-                            <?php include( TEMPLATEPATH . '/thumbnail.php' ); ?>
-                        <p><a class="btn btn-primary btn-lg" href="#" role="button">进入选购区</a></p>
-                    </div>
-                </div>
-
-
-<?php endwhile; ?>
-        <div style="text-align:center"><?php wp_pagenavi(); ?></div>
-<?php endif; wp_reset_query(); ?>
+                <?php endwhile; ?>
+                <?php endif; wp_reset_query(); ?>
             <!-- 循环模块 结束 -->
-</div>
+                
+            </ul>
 
-           <!--  <div class="jumbotron">
-                <div class="container">
-                    <h1>还在因为每天拿着厚厚的书而烦恼吗？扔掉它！</h1>
-                    <a href="#" class="thumbnail">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/banner_8.jpg" alt="kindle阅读器">
-                    </a>
-                    <p>
-                        <a class="btn btn-primary btn-lg">进入选购区</a>
-                    </p>
-                </div>
+
+            <!-- 右侧悬浮二维码返回顶部代码 开始-->
+            <div class="toolbar">
+                <a href="###" class="toolbar-item toolbar-item-weixin">
+                    <span class="toolbar-layer"></span>
+                </a>
+                <a href="###" class="toolbar-item toolbar-item-feedback"></a>
+                <a href="###" class="toolbar-item toolbar-item-app">
+                    <span class="toolbar-layer"></span>
+                </a>
+                <a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
             </div>
+            <!-- 右侧悬浮二维码返回顶部代码 结束-->
 
-            <div class="jumbotron">
-                <div class="container">
-                    <h1>美食诱惑，尽在蘑菇街</h1>
-                        <a href="#" class="thumbnail">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/banner_9.jpg" alt="蘑菇街">
-                        </a>
-                    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-                </div>
-            </div>
 
-            <div class="jumbotron">
-                <div class="container">
-                    <h1>2016年初，服装新品强势袭来</h1>
-                    <p>
-                        <a href="#" class="thumbnail">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/banner_7.jpg" alt="">
-                        </a>
-                    </p>
-                    <p>
-                        <a class="btn btn-primary btn-lg">进入选购区</a>
-                    </p>
-                </div>
-            </div> -->
+             <?php get_sidebar();?> 
+
+
+          
         </div>
         <!-- 内容区 结束 -->       
 <?php get_footer();?>

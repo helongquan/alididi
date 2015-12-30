@@ -1,14 +1,19 @@
+<?php    
+/* 
+Template Name: 友情链接模板  
+*/   
+?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>" />
-	<?php include( TEMPLATEPATH . '/seo.php' ); ?>
+    <?php include( TEMPLATEPATH . '/seo.php' ); ?>
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/main.css" type="text/css">
     <meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>" />
-	<title><?php if (is_home()||is_search()) { bloginfo('name'); } else { wp_title(''); print " - "; bloginfo('name'); } ?> </title>
+    <title><?php if (is_home()||is_search()) { bloginfo('name'); } else { wp_title(''); print " - "; bloginfo('name'); } ?> </title>
     <script src="<?php bloginfo('template_directory'); ?>/js/jquery-2.1.4.min.js" type="text/javascript"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js" type="text/javascript"></script>
     <script src="<?php bloginfo('template_directory'); ?>/js/zzsc.js" type="text/javascript"></script>
@@ -16,6 +21,13 @@
     <script type="text/javascript">$(function(){$("#hhService").fix({float:'right',minStatue:false,skin:'green',durationTime:1000})});</script>
     <?php wp_head(); ?>
     <title><?php bloginfo('name'); ?></title>
+    <style type="text/css">
+            #sidebar{width: 16%;float: left;}
+            #index_listgroup li{background-color: #f7f5ea;padding: 5px}
+            #index_listgroup{width: 100%}
+            #sidebar_link_right{float: right;width: 83%}
+            #link_list{display: inline}
+    </style>
 </head>
 <body id="app">
     <div class="container">
@@ -120,9 +132,6 @@
         </sidebar>
 
         <!-- 用户登录模态框弹出内容 结束 -->
-
-
-
         <!-- 顶部logo和搜索框 开始-->
         <div class="header">
             <div class="row">
@@ -165,47 +174,52 @@
             </div><!-- /.container-fluid -->
         </nav>
         
-    	<!-- 页面头部导航 结束-->
-        <div class="panel-body" id="panel-body">
-            <!-- 侧边栏 开始-->
+        <!-- 页面头部导航 结束-->
+        
+            <!-- 左侧边栏 开始-->
             <div class="sidebar" id="sidebar">
                 <ul class="list-group" id="list-group">
-                    <h3>网站页面</h3>
                     <li class="list-group-item"><?php wp_list_pages(); ?></li>
                 </ul>
             </div>
-            <!-- 侧边栏 结束-->
-            <div class="banner_right" id="banner_right">
-                <!-- 轮播图/幻灯片播放图，引用-->
-                <div class="box-zzsc">
-                    <div class="ctrl-panel">
-                        <a class=m-page href="javascript:;" rel=js_btn_list>1</a>
-                        <a class=m-page href="javascript:;" rel=js_btn_list>2</a>
-                        <a class=m-page href="javascript:;" rel=js_btn_list>3</a>
-                        <a class=m-page href="javascript:;" rel=js_btn_list>4</a>
-                        <a class=m-page href="javascript:;" rel=js_btn_list>5</a>
-                    </div>
-                    <div class=scroll-wrap>
-                        <div class=scroll_box_content rel="scroll_box_content">
-                            <div class=content_list>
-                                <img onClick="location.href='#'" src="<?php bloginfo('template_directory'); ?>/images/banner_1.jpg" />
-                            </div>
-                            <div class=content_list>
-                                <img onClick="location.href='#'" src="<?php bloginfo('template_directory'); ?>/images/banner_2.jpg" />
-                            </div>
-                            <div class=content_list>
-                                <img onClick="location.href='#'" src="<?php bloginfo('template_directory'); ?>/images/banner_3.jpg" />
-                            </div>
-                            <div class=content_list>
-                                <img onClick="location.href='#'" src="<?php bloginfo('template_directory'); ?>/images/banner_4.jpg" />
-                            </div>
-                            <div class=content_list>
-                                <img onClick="location.href='#'" src="<?php bloginfo('template_directory'); ?>/images/banner_5.jpg" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end-->
-            </div>
-            <!-- 右侧banner 结束-->
+            <!-- 左侧边栏 结束-->      
+            
+        <!-- 内容区 开始-->
+<!--             <div id="main-content">
+                <router-view></router-view>
+            </div>  -->
+            <!-- 内容模块 开始-->
+            <div id="sidebar_link_right">
+                <ul class="list-group" id="index_listgroup">
+                <!-- 循环模块 开始 -->
+                    <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                                <!--需要循环的模块-->
+                        <li class="list-group-item">
+                            <span id="link_list">
+                                <?php wp_list_bookmarks('title_li=&categorize=0&orderby=rand&limit=30'); ?>
+                            </span>
+                        </li>
+                                <!-- 需要循环模块的闭合标签 -->
+                    <?php endwhile; ?>
+                    <?php endif; wp_reset_query(); ?>
+                <!-- 循环模块 结束 -->
+                    
+                </ul>
+            </div>    
+
+            <!-- 右侧悬浮二维码返回顶部代码 开始-->
+            <!-- <div class="toolbar">
+                <a href="###" class="toolbar-item toolbar-item-weixin">
+                    <span class="toolbar-layer"></span>
+                </a>
+                <a href="###" class="toolbar-item toolbar-item-feedback"></a>
+                <a href="###" class="toolbar-item toolbar-item-app">
+                    <span class="toolbar-layer"></span>
+                </a>
+                <a href="javascript:scroll(0,0)" id="top" class="toolbar-item toolbar-item-top"></a>
+            </div> -->
+            <!-- 右侧悬浮二维码返回顶部代码 结束--> 
         </div>
+        <!-- 内容区 结束 -->       
+<?php get_footer();?>

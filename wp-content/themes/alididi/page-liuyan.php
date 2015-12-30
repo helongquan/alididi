@@ -1,3 +1,8 @@
+<?php    
+/* 
+Template Name: 留言板页面   
+*/   
+?>
 <?php get_header();?>       
         <!-- 内容区 开始-->
 <!--             <div id="main-content">
@@ -11,25 +16,23 @@
                             <!--需要循环的模块-->
                     <li class="list-group-item">
                         <div class="media">
-                          <div class="media-left media-middle">
-                            <a href="#">
-                              <img class="media-object" src="<?php bloginfo('template_directory'); ?>/images/pic5.jpg" alt="<?php wp_title(); ?>">
-                            </a>
-                          </div>
                           <div class="media-body">
-                            <h4><a href="<?php the_permalink() ?>"><?php echo mb_strimwidth(get_the_title(), 0, 32, '...'); ?></a></h4>
-                            <p><?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 300,"……");?></p>
+                            <h3><a href="<?php the_permalink() ?>"><?php echo mb_strimwidth(get_the_title(), 0, 40, '...'); ?></a></h3>
+                            <p id="single_biaoqian"><span class="glyphicon glyphicon-user">:<?php the_author(); ?></span>&nbsp;&nbsp;<span class="glyphicon glyphicon-time">:<?php the_date_xml()?>&nbsp;</span><span class="glyphicon glyphicon-th-list">:<?php the_category(',') ?></span></p>
+                            <p><?php the_content(); ?></p>
                           </div>
+                          <p><a href="<?php the_permalink() ?>#commentform" >发表评论<i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;|&nbsp;&nbsp;<i class="glyphicon glyphicon-scale"></i>:<?php comments_popup_link('0 条评论','1 条评论','% 条评论','','评论已关闭'); ?></p>
                         </div>
+                        <!-- 文章分页代码调用 开始 -->
+                            <?php wp_link_pages(array('before' => '<div class="fenye">分页阅读：', 'after' => '', 'next_or_number' => 'next', 'previouspagelink' => '&laquo;', 'nextpagelink' => "")); ?> <?php wp_link_pages(array('before' => '', 'after' => '', 'next_or_number' => 'number', 'link_before' =>'<span>', 'link_after'=>'</span>')); ?> <?php wp_link_pages(array('before' => '', 'after' => '</div>', 'next_or_number' => 'next', 'previouspagelink' => '', 'nextpagelink' => "&raquo;")); ?>
+                        <!-- 文章分页代码调用 结束 -->
                     </li>
 
                 <?php endwhile; ?>
-                        <div style="text-align:center;padding:10px" id="pagenavi_style"><?php wp_pagenavi(); ?></div>
                 <?php endif; wp_reset_query(); ?>
             <!-- 循环模块 结束 -->
                 
             </ul>
-
 
             <!-- 右侧悬浮二维码返回顶部代码 开始-->
             <div class="toolbar">

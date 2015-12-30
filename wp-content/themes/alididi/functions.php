@@ -27,3 +27,15 @@ echo '/images/random/'.$random.'.jpg';
 return $first_img;
 }
 ?>
+<!-- 小工具栏调用函数 -->
+<?php
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+        'before_widget' => '<div class="sidebox">	',
+        'after_widget' => '</div>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ));
+?>
+<!-- 友情链接添加 -->
+<?php add_filter( 'pre_option_link_manager_enabled', '__return_true' ); ?>

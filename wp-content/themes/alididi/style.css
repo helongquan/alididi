@@ -13,6 +13,7 @@ Tags: electronic commercial, shopping suggestion, bootstrap ,php
     width: 100%;
     padding:0px 20px;
 }
+.container a:hover{color:#837e6c;text-decoration: none; }
 body{
     background-color: #ffffff;
     font-family:Arial,Verdana, Helvetica, sans-serif;
@@ -72,7 +73,6 @@ a:hover{color:#c00; text-decoration:underline;}
 body{position:relative;margin:0;padding:10px 0 0 0;}
 *{margin:0;padding:0;list-style-type:none}
 a,img{border:0}
-a,a:hover{color:#333;text-decoration:none}
 /*QQÔÚÏß¿Í·þ*/
 /*侧边在线客服样式 开始*/
 .qqserver p img{display:inline;margin:-5px 5px 0 0;vertical-align:middle;}
@@ -112,11 +112,18 @@ a,a:hover{color:#333;text-decoration:none}
 .panel-body{padding: 0px}
 /*²à±ßÀ¸*/
 .side_content{z-index: 10004}
+/*头部页面列表样式 开始*/
 #list-group{
     z-index: 1000;
     overflow: hidden;
+    background-color: #f7f5ea;
 }
+#list-group li{padding: 10px;background-color:#f7f5ea}
+#list-group{border-radius: 5px 5px 0px 0px}
+#list-group h3{padding:0px 0px 0px 10px }
 #sidebar{float: left;margin: 5px auto;width:16%}
+.list-group-item{border: transparent;}
+/*头部页面列表样式 结束*/
 /*ÍøÕ¾µ×²¿*/
 
 /*.row .col-lg-3{background-color: #ccccff;padding: 10px}*/
@@ -133,7 +140,7 @@ a,a:hover{color:#333;text-decoration:none}
         color: #333333;
         width: 100%;
         }
-.footer a:hover{color: #837e6c}
+.footer a:hover{color: #837e6c;text-decoration: none}
 .footer a{color: #333333}
 .footer>p{background-color: #333333;padding: 20px;text-align: center;color: #ffffff;margin:-10px auto}
 .footer>p a{color: #777777}
@@ -142,11 +149,11 @@ a,a:hover{color:#333;text-decoration:none}
 
 /*巨幕自定义样式 开始*/
 .jumbotron{
-            background-color: #837e6c;
+            background-color: #f7f5ea;
             clear: both;
-            padding: 0;
+            margin-top: 10px;
         }
-        .jumbotron>img{width: 100%;margin: 0px -5px}
+.jumbotron>img{width: 100%;margin: 0px -5px}
 /*巨幕自定义样式 结束*/
 /*用户登录样式 开始*/
 .login_left{width: 60%;height: auto;background-color: #333333;float: left;border-radius: 5px}
@@ -180,6 +187,21 @@ a,a:hover{color:#333;text-decoration:none}
 .success_reg{margin: 20px auto}
 /*用户注册成功样式 结束*/
 
+/*首页文章显示样式 开始*/
+#index_listgroup{margin: 10px auto;clear: both;width: 70%;float: left}
+#index_listgroup li{background-color: #f7f5ea}
+#index_sidebar_right{margin: 10px auto;clear:right;width: 29%;float:right}
+/*首页文章显示样式 结束*/
+
+/*侧边栏 小工具栏样式 开始*/
+.sidebox{margin-bottom: 10px;clear:right;width: 100%;float:right;background-color: #6f787f;padding: 5px 10px 5px 10px;border-radius: 5px 5px 0px 0px}
+.sidebox a{margin: 10px auto;border-bottom:1px dashed #ffffff;display: block; }
+.sidebox a:hover{color: #ffffff}
+.sidebox h3{background-color: #333333;display: block;padding: 10px;margin:-5px -10px 5px -10px;border-radius: 5px 5px 0px 0px;color: #ffffff}
+/*侧边栏 小工具栏样式 结束*/
+/*分页条样式 开始*/
+#pagenavi_style{margin-top: 20px}
+/*分页条样式 结束*/
 /*404页面样式 开始*/
 .404_img>img{width: 100%;height: auto;}
 /*404页面样式 结束*/
@@ -187,6 +209,36 @@ a,a:hover{color:#333;text-decoration:none}
 /*搜索页面样式 开始*/
 .sousuo_jg{margin: 20px auto;padding: 10px;clear: both;}
 /*搜索页面样式 结束*/
+
+/*首页导航条样式 开始*/
+#index_navbar_id li{display: inline-block;padding: 10px}
+/*首页导航条样式 结束*/
+
+/*文章页样式 开始*/
+#single_biaoqian{margin: 10px auto}
+/*文章页样式 结束*/
+/*用户评论样式 开始*/
+#commentform textarea{width: 100%}
+#respond{background-color: #f7f5ea;padding:5px 10px;margin: 10px auto}
+#div-comment-4{padding: 10px}
+/*用户评论样式 结束*/
+/*文章页分页样式 开始*/
+.fenye{text-align:center;margin:0px auto 10px;font-weight:bold} 
+.fenye span{background-color:#333333;color:#fff;font-weight: bold;margin:0px 1px;padding:5px 15px;display:inline-block;text-decoration:none;border:1px solid #e0e0e0;border-radius: 5px} 
+.fenye a{text-decoration:none;} 
+.fenye a span{background-color:#F6F6E8;font-weight: normal;color: #000;text-decoration: none;} 
+.fenye a:hover span{background-color:#837e6c;color: #fff;} 
+/*文章页分页样式 结束*/
+/*上下篇样式 开始*/
+#shang_ye{background-color: #333333;padding:10px 0px 10px 5px;border-right:1px solid #ffffff;margin: 5px auto}
+#xia_ye{background-color: #333333;padding:10px 0px 10px 5px;margin: 5px auto}
+#shang_xia_ye{margin: 10px 0px 0px 0px;color: #ffffff}
+#shang_xia_ye a:hover{color: #ffffff}
+/*上下篇样式 结束*/
+
+/*相关文章样式 开始*/
+#xiangguan li{padding: 10px}
+/*相关文章样式 结束*/
 
 
 @media screen and (max-width:920px){
@@ -201,6 +253,8 @@ a,a:hover{color:#333;text-decoration:none}
     .login_left{display: none;}
     #sidebar{width: 100%;display:inherit;}
     #banner_right{width: 100%;}
+    #index_listgroup{width: 100%}
+    #index_sidebar_right{width: 100%}
 } 
 @media screen and (max-width:460px){
     #img_404{display:none;}

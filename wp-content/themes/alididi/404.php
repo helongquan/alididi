@@ -8,9 +8,12 @@
 </style>
 </head>
 <body>
+
 	<div class="main">
 		<div class="error_img"><img src="<?php bloginfo('template_directory'); ?>/images/404.png"></div>
 		出错啦！请尝试访问 <a href="<?php echo get_option('home'); ?>">首页</a>
 	</div>
-</body>
-</html>
+
+
+
+</body></html>
