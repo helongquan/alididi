@@ -1,6 +1,6 @@
 <?php    
 /* 
-Template Name: 友情链接模板  
+Template Name: 经典页面模板  
 */   
 ?>
 <!DOCTYPE html>
@@ -199,8 +199,11 @@ Template Name: 友情链接模板
                             <span id="link_list">
                                 <h3><a href="<?php the_permalink() ?>"><?php echo mb_strimwidth(get_the_title(), 0, 32, '...'); ?></a></h3>
                                 <hr style="width:100%;border:1px dashed #888888;margin-bottom:10px">
-                                <?php wp_list_bookmarks('title_li=&categorize=0&orderby=rand&limit=30'); ?>
+                                <p><?php the_content(); ?></p>
                             </span>
+                            <!-- 文章分页代码调用 开始 -->
+                            <?php wp_link_pages(array('before' => '<div class="fenye">分页阅读：', 'after' => '', 'next_or_number' => 'next', 'previouspagelink' => '&laquo;', 'nextpagelink' => "")); ?> <?php wp_link_pages(array('before' => '', 'after' => '', 'next_or_number' => 'number', 'link_before' =>'<span>', 'link_after'=>'</span>')); ?> <?php wp_link_pages(array('before' => '', 'after' => '</div>', 'next_or_number' => 'next', 'previouspagelink' => '', 'nextpagelink' => "&raquo;")); ?>
+                        <!-- 文章分页代码调用 结束 -->
                         </li>
                                 <!-- 需要循环模块的闭合标签 -->
                     <?php endwhile; ?>

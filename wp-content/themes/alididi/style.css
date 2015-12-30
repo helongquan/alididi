@@ -187,11 +187,12 @@ a,img{border:0}
 .success_reg{margin: 20px auto}
 /*用户注册成功样式 结束*/
 
-/*首页文章显示样式 开始*/
+/*首页文章分类显示样式 开始*/
 #index_listgroup{margin: 10px auto;clear: both;width: 70%;float: left}
 #index_listgroup li{background-color: #f7f5ea}
 #index_sidebar_right{margin: 10px auto;clear:right;width: 29%;float:right}
-/*首页文章显示样式 结束*/
+#list_group_item .media{border-bottom: 1px solid #aaaaaa;padding-bottom:10px;margin: 0px -5px }
+/*首页文章分类显示样式 结束*/
 
 /*侧边栏 小工具栏样式 开始*/
 .sidebox{margin-bottom: 10px;clear:right;width: 100%;float:right;background-color: #6f787f;padding: 5px 10px 5px 10px;border-radius: 5px 5px 0px 0px}
@@ -239,7 +240,9 @@ a,img{border:0}
 /*相关文章样式 开始*/
 #xiangguan li{padding: 10px}
 /*相关文章样式 结束*/
-
+/*最新优惠样式 开始*/
+#newest_col{margin: 10px auto}
+/*最新优惠样式 结束*/
 
 @media screen and (max-width:920px){
     #head_logo{margin: 10px auto;}
@@ -255,6 +258,7 @@ a,img{border:0}
     #banner_right{width: 100%;}
     #index_listgroup{width: 100%}
     #index_sidebar_right{width: 100%}
+    #sidebar{display: none;}
 } 
 @media screen and (max-width:460px){
     #img_404{display:none;}
@@ -262,6 +266,7 @@ a,img{border:0}
     .error_tishi p{line-height: 20px}
     #sidebar{display: none;}
     #banner_right{display: none;}
+    #panel-body{display: none;}
 } 
 /*注意，在为CSS的类或者id命名的时候，最好别用数字开头，以免造成不必要的麻烦*/
    

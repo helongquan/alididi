@@ -9,7 +9,7 @@
                 <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
                             <!--需要循环的模块-->
-                    <li class="list-group-item">
+                    <li class="list-group-item" id="list_group_item">
                         <div class="media">
                           <div class="media-left media-middle">
                             <a href="#">

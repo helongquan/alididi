@@ -1,6 +1,6 @@
 <?php    
 /* 
-Template Name: 友情链接模板  
+Template Name: 最新优惠页面模板  
 */   
 ?>
 <!DOCTYPE html>
@@ -176,38 +176,30 @@ Template Name: 友情链接模板
         
         <!-- 页面头部导航 结束-->
         
-            <!-- 左侧边栏 开始-->
-            <div class="sidebar" id="sidebar">
-                <ul class="list-group" id="list-group">
-                    <li class="list-group-item"><?php wp_list_pages(); ?></li>
-                </ul>
-            </div>
-            <!-- 左侧边栏 结束-->      
-            
-        <!-- 内容区 开始-->
-<!--             <div id="main-content">
-                <router-view></router-view>
-            </div>  -->
-            <!-- 内容模块 开始-->
-            <div id="sidebar_link_right">
-                <ul class="list-group" id="index_listgroup">
-                <!-- 循环模块 开始 -->
+            <legend>
+                <ol class="breadcrumb">
+                  <li><a href="<?php echo get_option('home'); ?>">首页</a></li>
+                  <li class="active">最新优惠</li>
+                </ol>
+            </legend>
+            <div class="row" id="newest_row">
                     <?php if (have_posts()) : ?>
+                    <?php query_posts('cat=61' . $mcatID. '&caller_get_posts=1&showposts=8'); ?>
                     <?php while (have_posts()) : the_post(); ?>
-                                <!--需要循环的模块-->
-                        <li class="list-group-item">
-                            <span id="link_list">
-                                <h3><a href="<?php the_permalink() ?>"><?php echo mb_strimwidth(get_the_title(), 0, 32, '...'); ?></a></h3>
-                                <hr style="width:100%;border:1px dashed #888888;margin-bottom:10px">
-                                <?php wp_list_bookmarks('title_li=&categorize=0&orderby=rand&limit=30'); ?>
-                            </span>
-                        </li>
-                                <!-- 需要循环模块的闭合标签 -->
+                    <!-- 循环的模块 开始 -->
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" id="newest_col">
+                            <?php include( TEMPLATEPATH . '/thumbnail.php' ); ?>
+                        <div class="caption">
+                            <h4>
+                            <a href="<?php the_permalink() ?>"> <?php echo mb_strimwidth(get_the_title(), 0, 32,''); ?></a>
+                            </h4>
+                            <p><a href="#" class="btn btn-primary" role="button">了解一下</a> <a href="#" class="btn btn-default" role="button">下单</a></p>
+                          </div>
+                    </div>
+                    <!-- 循环的模块 结束 -->
                     <?php endwhile; ?>
                     <?php endif; wp_reset_query(); ?>
-                <!-- 循环模块 结束 -->
-                    
-                </ul>
+            
             </div>    
 
             <!-- 右侧悬浮二维码返回顶部代码 开始-->

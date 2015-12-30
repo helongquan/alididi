@@ -19,9 +19,9 @@ Template Name: 默认页面模板
                           <div class="media-body">
                             <h3><a href="<?php the_permalink() ?>"><?php echo mb_strimwidth(get_the_title(), 0, 40, '...'); ?></a></h3>
                             <p id="single_biaoqian"><span class="glyphicon glyphicon-user">:<?php the_author(); ?></span>&nbsp;&nbsp;<span class="glyphicon glyphicon-time">:<?php the_date_xml()?>&nbsp;</span><span class="glyphicon glyphicon-th-list">:<?php the_category(',') ?></span></p>
+                            <hr style="width:100%;border:1px solid #888888;margin-bottom:10px">
                             <p><?php the_content(); ?></p>
                           </div>
-                          <p><a href="<?php the_permalink() ?>#commentform" >发表评论<i class="glyphicon glyphicon-pencil"></i></a>&nbsp;&nbsp;|&nbsp;&nbsp;<i class="glyphicon glyphicon-scale"></i>:<?php comments_popup_link('0 条评论','1 条评论','% 条评论','','评论已关闭'); ?></p>
                         </div>
                         <!-- 文章分页代码调用 开始 -->
                             <?php wp_link_pages(array('before' => '<div class="fenye">分页阅读：', 'after' => '', 'next_or_number' => 'next', 'previouspagelink' => '&laquo;', 'nextpagelink' => "")); ?> <?php wp_link_pages(array('before' => '', 'after' => '', 'next_or_number' => 'number', 'link_before' =>'<span>', 'link_after'=>'</span>')); ?> <?php wp_link_pages(array('before' => '', 'after' => '</div>', 'next_or_number' => 'next', 'previouspagelink' => '', 'nextpagelink' => "&raquo;")); ?>

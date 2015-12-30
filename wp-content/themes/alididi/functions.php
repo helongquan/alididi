@@ -20,7 +20,7 @@ $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_cont
 $first_img = $matches [1] [0];
 
 if(empty($first_img)){ //Defines a default image
-$random = mt_rand(1, 2);
+$random = mt_rand(1, 9);//修改随机图片文件夹里的图片数量，1表示一次使用一张，2表示文件夹中总共有两张
 echo get_bloginfo ( 'stylesheet_directory' );
 echo '/images/random/'.$random.'.jpg';
 }
